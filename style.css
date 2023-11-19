@@ -24,7 +24,7 @@ nav{
     top: 0; 
     left: 0; 
     z-index: 9999; 
-    width: 100%; 
+    backdrop-filter: blur(10px);
 }
 #logo img{
     height: 99%;
@@ -50,11 +50,11 @@ nav{
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 #container1 h1{
-  font-size: 50vh;
+  font-size: 480px;
   margin-bottom: 50px;
   font-family: franchiseregular;
   font-weight: 100;
@@ -64,8 +64,55 @@ nav{
   display: flex;
   width: 80vw;
   justify-content: space-between;
+  margin-bottom: 0vh;
 }
 #container1 img{
   height: 150px;
   width: auto;
+}
+@media screen and (width < 1000px){
+  #container1 h1{
+    font-size: 330px;
+  }
+}
+@media screen and (width < 660px){
+  #container1{
+    justify-content: center;
+  }
+  #container1 h1{
+    font-size: 220px;
+  }
+  #navigationItems ul{
+    display: none;
+  }
+  .l{
+    display: none;
+  }
+  #navRightBox{
+    width: auto;
+    padding-right: 20px;
+  }
+  .hamburger{
+    display: block;
+    margin: 5px;
+  }
+}
+@media screen and (width < 450px){
+  nav{
+    bottom: 0;
+    top: auto;
+  }
+  #container1 h1{
+    font-size: 200px;
+  }
+}
+@media screen and (width < 390px){
+  nav{
+    bottom: 0;
+    top: auto;
+  }
+
+  #container1 h1{
+    font-size: 170px;
+  }
 }
