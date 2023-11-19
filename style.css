@@ -45,6 +45,9 @@ nav{
     list-style: none;
     color: #925ff0;
 }
+.hamburger{
+  display: none;
+}
 #container1{
   display: flex;
   flex-direction: column;
