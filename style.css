@@ -6,6 +6,9 @@
   font-style: normal;
 
 }
+::-webkit-scrollbar {
+  display: none;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -45,6 +48,16 @@ nav{
     list-style: none;
     color: #925ff0;
 }
+#navigationItems li{
+  transition: 0.3s ease-in;
+}
+#navigationItems li:hover{
+  transform: scale(1.08);
+}
+#navigationItems a:link{
+  text-decoration: none;
+}
+
 .hamburger{
   display: none;
 }
@@ -73,9 +86,26 @@ nav{
   height: 150px;
   width: auto;
 }
+#container2{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+}
+#container2 img{
+  height: auto;
+  width: 28vw;
+}
+#container2 .aboutText{
+  width: 500px;
+}
 @media screen and (width < 1000px){
   #container1 h1{
     font-size: 330px;
+  }
+  #container2{
+    flex-direction: column;
   }
 }
 @media screen and (width < 660px){

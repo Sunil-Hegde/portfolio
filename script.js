@@ -23,14 +23,14 @@ toggleSwitch.addEventListener('change', function() {
         document.body.style.backgroundColor = '#21251f';
         helloFont.style.color = '#a3fda1';
         navFont.forEach(link => {
-            link.style.color = '#925ff0';
+            link.style.color = '#ffffff';
         });
         navFont.forEach(link => {
             link.addEventListener('mouseover', function () {
                 this.style.color = 'red';
             });
             link.addEventListener('mouseout', function () {
-                this.style.color = '#925ff0';
+                this.style.color = '#ffffff';
             });
         });
     }
@@ -42,6 +42,11 @@ hamburgerSwitch.addEventListener('change', function() {
     } else {
         closeNav();
     }
+});
+navFont.forEach(link => {
+    link.addEventListener('click', function () {
+        closeNav();
+    });
 });
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
