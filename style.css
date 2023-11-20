@@ -98,6 +98,7 @@ nav{
   .hamburger{
     display: block;
     margin: 5px;
+    z-index: 99999999;
   }
 }
 @media screen and (width < 450px){

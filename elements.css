@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'franchiseregular';
+  src: url('./assets/Fonts/Franchise/franchise-webfont.woff2') format('woff2'),
+       url('./assets/Fonts/Franchise/franchise-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 /* Togle Switch */
 .l {
     display: block;
@@ -106,4 +114,39 @@
     stroke-dasharray: 20 300;
     stroke-dashoffset: -32.42;
   }
-  
+  /* The Overlay (background) */
+.overlay { 
+  height: 100%;
+  width: 0;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(30px);
+  overflow-x: hidden; 
+  transition: 0.5s;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 35%;
+  width: 100%;
+  text-align: center; 
+  margin-top: 30px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 50px;
+  font-family: franchiseregular;
+  color: #925ff0;
+  display: block; 
+  transition: 0.3s; 
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: red;
+}
