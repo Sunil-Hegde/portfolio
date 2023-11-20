@@ -107,6 +107,9 @@ nav{
   #container2{
     flex-direction: column;
   }
+  #container2 .aboutText{
+    width: 300px;
+  }
 }
 @media screen and (width < 660px){
   #container1{
