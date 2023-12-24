@@ -151,3 +151,97 @@
 .overlay a:hover, .overlay a:focus {
   color: red;
 }
+.card {
+  box-sizing: border-box;
+  width: 350px;
+  height: 500px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 2px solid white;
+  box-shadow: 12px 17px 51px rgba(153, 152, 152, 0.486);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin: 30px;
+}
+
+.card:hover {
+  border: 2px solid #925ff0;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  width: 40%;
+  height: 80%;
+  cursor: pointer;
+ }
+ 
+ button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #a3fda1;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+ }
+ 
+ button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+ }
+ 
+ button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+ }
+ 
+ @keyframes scaleUp {
+  0% {
+   transform: scale(1);
+  }
+ 
+  50% {
+   transform: scale(0.95);
+  }
+ 
+  100% {
+   transform: scale(1);
+  }
+ }
+ 

@@ -9,6 +9,10 @@
 ::-webkit-scrollbar {
   display: none;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -108,11 +112,21 @@ nav{
 
 #container3{
   display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   justify-content: space-around;
   align-items: center;
 }
+.projects{
+  display: flex;
+  justify-content: space-around;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
 @media screen and (width < 1000px){
   #container1 h1{
     font-size: 330px;
