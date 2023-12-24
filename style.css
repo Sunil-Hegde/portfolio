@@ -120,11 +120,21 @@ nav{
 }
 .projects{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .buttons{
   display: flex;
   justify-content: space-around;
+}
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 2s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
 }
 
 @media screen and (width < 1000px){
@@ -136,6 +146,13 @@ nav{
   }
   #container2 .aboutText{
     width: 300px;
+  }
+  #container2 img{
+    width: 350px;
+  }
+  #container3{
+    height: auto;
+    margin-bottom: 5vh;
   }
 }
 @media screen and (width < 660px){
@@ -163,8 +180,8 @@ nav{
 }
 @media screen and (width < 450px){
   nav{
-    bottom: 0;
-    top: auto;
+    
+    top: 0;
   }
   #container1 h1{
     font-size: 200px;
