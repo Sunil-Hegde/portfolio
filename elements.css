@@ -4,7 +4,29 @@
        url('./assets/Fonts/Franchise/franchise-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'varsityregular';
+  src: url('./assets/Fonts/varsity/varsity_regular-webfont.woff2') format('woff2'),
+       url('./assets/Fonts/varsity/varsity_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
+}
+@font-face {
+  font-family: 'hey_augustregular';
+  src: url('./assets/Fonts/august/hey_august-webfont.woff2') format('woff2'),
+       url('assets/Fonts/august/hey_august-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'louis_george_caferegular';
+  src: url('./assets/Fonts/louis/louis_george_cafe-webfont.woff2') format('woff2'),
+       url('./assets/Fonts/louis/louis_george_cafe-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 /* Togle Switch */
 .l {
@@ -172,7 +194,21 @@
   color: black;
   margin: 30px;
 }
-
+.card h3{
+  font-family: louis_george_caferegular;
+  font-weight: 900;
+}
+.card p,
+.card2 p,
+#navigationItems li{
+  font-family: louis_george_caferegular;
+  font-weight: 300;
+}
+.card2 h2{
+  font-family: varsityregular;
+  font-weight: 100;
+  font-size: 60px;
+}
 .card:hover {
   border: 2px solid #925ff0;
   transform: scale(1.05);
@@ -181,7 +217,7 @@
 .card:active {
   transform: scale(0.95);
 }
-button {
+.buttons button{
   position: relative;
   display: flex;
   justify-content: center;
@@ -197,7 +233,7 @@ button {
   cursor: pointer;
  }
  
- button:after {
+ .buttons button:after {
   content: " ";
   width: 0%;
   height: 100%;
@@ -207,13 +243,13 @@ button {
   right: 0;
  }
  
- button:hover::after {
+ .buttons button:hover::after {
   right: auto;
   left: 0;
   width: 100%;
  }
  
- button span {
+ .buttons button span {
   text-align: center;
   text-decoration: none;
   width: 100%;
@@ -226,7 +262,7 @@ button {
   transition: all 0.3s ease-in-out;
  }
  
- button:hover span {
+ .buttons button:hover span {
   color: #183153;
   animation: scaleUp 0.3s ease-in-out;
  }
@@ -244,4 +280,165 @@ button {
    transform: scale(1);
   }
  }
+
+ .card2 {
+  width: 80vw;
+  height: auto;
+  min-height: 75vh;
+  margin: 0 auto;
+  background-color: #000000;
+  border-radius: 8px;
+  z-index: 1;
+ }
+ 
+ .tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+ }
+ 
+ .circle {
+  padding: 0 4px;
+ }
+ 
+ .box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+ }
+ 
+ .red {
+  background-color: #ff605c;
+ }
+ 
+ .yellow {
+  background-color: #ffbd44;
+ }
+ 
+ .green {
+  background-color: #00ca4e;
+ }
+ :root {
+  --lightblk: #21251f;
+  --blk: #111417;
+}
+
+.header {
+  font-size: 57px;
+  color: white;
+  font-family: franchiseregular;
+  flex-basis: 100%;
+}
+
+
+.footer {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 2em;
+  gap: 10px;
+  display: flex;
+  bottom: 20px;
+  margin: auto;
+  margin-top: 15%;
+  position: relative;
+  width: 90%;
+  border-radius: 10px;
+  background-color: var(--blk);
+}
+
+div.right {
+  margin: 0;
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  gap: 10px;
+  flex: 1;
+}
+
+div.left {
+  flex-basis: 100%;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  width: 50%;
+  flex-direction: column;
+  flex: 1;
+}
+
+textarea {
+  font-family: monospace;
+  box-sizing: border-box;
+  color: whitesmoke;
+  outline: none;
+  resize: none;
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: var(--lightblk);
+}
+
+.msg {
+  flex-basis: 100%;
+}
+
+div.bottom {
+  min-width: 0;
+  overflow-x: scroll;
+  padding: 1em;
+  gap: 2em;
+  color: grey;
+  width: 100%;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ftrtxt {
+  flex-basis: 100%;
+  font-size: 15px;
+  text-align: center;
+  font-family: monospace;
+  color: grey;
+}
+
+svg {
+  fill: white;
+  width: 50px;
+  height: 50px;
+  margin: 25px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+svg:hover {
+  transform: scale(1.1);
+  fill: grey;
+}
+
+::placeholder {
+  font-family: monospace;
+}
+#submitbtn {
+  display: none;
+  border-radius: 10px;
+  border: none;
+  font-family: Rubik Mono One;
+  font-size: 15px;
+  transition: 0.5s;
+}
+
+#submitbtn:hover {
+  background-color: var(--lightblk);
+  color: white;
+}
+
+@media screen and (width < 450px){
+  .card{
+    width: 300px;
+  }
+}
  

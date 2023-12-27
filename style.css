@@ -4,7 +4,29 @@
        url('./assets/Fonts/Franchise/franchise-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'varsityregular';
+  src: url('./assets/Fonts/varsity/varsity_regular-webfont.woff2') format('woff2'),
+       url('./assets/Fonts/varsity/varsity_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
+}
+@font-face {
+  font-family: 'hey_augustregular';
+  src: url('./assets/Fonts/august/hey_august-webfont.woff2') format('woff2'),
+       url('assets/Fonts/august/hey_august-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'louis_george_caferegular';
+  src: url('./assets/Fonts/louis/louis_george_cafe-webfont.woff2') format('woff2'),
+       url('./assets/Fonts/louis/louis_george_cafe-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -103,17 +125,35 @@ nav{
   height: auto;
   width: 28vw;
   border-radius: 30px;
-  padding: 10px;
   margin: auto;
+  border: 2px solid #925ff0;
+}
+#container2 h1{
+  font-family: hey_augustregular;
+  font-size: 125px;
+  font-weight: 100;
+  color: #a3fda1;
+}
+#container2 h3{
+  font-family: louis_george_caferegular;
+  font-size: 40px;
+  color: #925ff0;
 }
 #container2 .aboutText{
   width: 500px;
 }
-
+#container3 h1,
+#container4 h1{
+  font-family: franchiseregular;
+  color: #a3fda1;
+  font-size: 80px;
+  font-weight: 100;
+}
 #container3{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   width: 100vw;
   justify-content: space-around;
   align-items: center;
@@ -136,23 +176,62 @@ nav{
   opacity: 1;
   filter: blur(0);
 }
-
-@media screen and (width < 1000px){
+#container4{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px;
+}
+.card__content{
+  display: flex;
+  margin: 30px 10px;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+.card__content div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leftSide,
+.rightSide{
+  width: 50%;
+}
+.card__content div .buttons{
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media screen and (width < 1050px){
   #container1 h1{
     font-size: 330px;
   }
   #container2{
     flex-direction: column;
+    height: auto;
+    min-height: 100vh;
   }
   #container2 .aboutText{
-    width: 300px;
+    width: 80vw;
   }
   #container2 img{
     width: 350px;
   }
-  #container3{
+  #container3,
+  #container4{
     height: auto;
+    min-height: 100vh;
     margin-bottom: 5vh;
+  }
+  .card__content{
+    flex-direction: column;
+  }
+  .leftSide,
+  .rightSide{
+  height: 50%;
+  width: 90%;
   }
 }
 @media screen and (width < 660px){
@@ -177,10 +256,15 @@ nav{
     margin: 5px;
     z-index: 99999999;
   }
+  #container2 h1{
+    font-size: 80px;
+  }
+  #container2 h3{
+    font-size: 30px;
+  }
 }
 @media screen and (width < 450px){
   nav{
-    
     top: 0;
   }
   #container1 h1{
@@ -188,12 +272,13 @@ nav{
   }
 }
 @media screen and (width < 390px){
-  nav{
-    bottom: 0;
-    top: auto;
-  }
-
   #container1 h1{
     font-size: 170px;
+  }
+  #container2 h1{
+    font-size: 60px;
+  }
+  #container2 h3{
+    font-size: 20px;
   }
 }
