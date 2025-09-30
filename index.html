@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunil Hegde - Portfolio</title>
+    <meta name="description" content="Portfolio of Sunil Hegde - Computer Science Student interested in Operating Systems, Compilers, and Embedded Systems" />
+    <meta name="keywords" content="Sunil Hegde, Computer Science, Operating Systems, Compilers, RTEMS, GSoC, UVCE" />
+    <meta name="author" content="Sunil Hegde" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sunil Hegde - Portfolio" />
+    <meta property="og:description" content="Computer Science Student interested in Operating Systems, Compilers, and Embedded Systems" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
+    <div class="brutalist-container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-name">
+            <span class="glitch-text" data-text="SUNIL HEGDE">SUNIL HEGDE</span>
+          </h1>
+          <div class="hero-labels">
+            <div class="label">Operating Systems</div>
+            <div class="label">Compilers</div>
+            <div class="label">Embedded Systems</div>
+          </div>
+          <div class="hero-blog-link">
+            <a href="https://blog.sunilhegde.tech" target="_blank" class="blog-button">
+              READ MY BLOG →
+            </a>
+          </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="brutal-nav">
+          <a href="#about" class="nav-item">ABOUT</a>
+          <a href="#experience" class="nav-item">EXPERIENCE</a>
+          <a href="#projects" class="nav-item">PROJECTS</a>
+          <a href="#connect" class="nav-item">CONNECT</a>
+        </nav>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="brutal-section">
+        <div class="section-header">
+          <h2 class="section-title">ABOUT</h2>
+        </div>
+        <div class="section-content">
+          <div class="about-block">
+            <p class="about-greeting">Hello, I am Sunil Hegde</p>
+            <p class="about-description">
+              I'm in my final year of Information Science and Engineering at UVCE, Bengaluru.
+            </p>
+            <p class="about-description">
+              I love how everything works around me and take interest in breaking stuff 
+              (though I might not be able to fix it later). Currently I am trying to understand 
+              how computers actually work focusing right at the point where hardware interacts with software.
+            </p>
+            <p class="about-description">
+              Operating Systems and compilers are my current interest 
+              (should see how much I will stick to it tho hehe).
+            </p>
+            <p class="about-description about-personal">
+              Apart from technical, I have been learning Hindustani Classical flute and trying not break any bones while learning to skate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="brutal-section">
+        <div class="section-header">
+          <h2 class="section-title">EXPERIENCE</h2>
+        </div>
+        <div class="section-content">
+          <div class="experience-block">
+            <div class="experience-header">
+              <h3 class="experience-title">Google Summer of Code Contributor at RTEMS</h3>
+              <div class="experience-year">2025</div>
+            </div>
+            <p class="experience-desc">
+              Participated in Google Summer of Code 2025 as a contributor to RTEMS where I focused on removing set_vector(), 
+              a deprecated function used widely in the codebase for assigning ISR to vectors which was showing warnings 
+              in GCC 14 and 15 because of pointer mismatch.
+            </p>
+            <div class="experience-links">
+              <a href="https://summerofcode.withgoogle.com/programs/2025/projects/vuNHgfF2" target="_blank" class="experience-link">
+                Project Archive →
+              </a>
+              <a href="https://sunil-hegde.github.io/GSoC-25/" target="_blank" class="experience-link">
+                Final Report →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="brutal-section">
+        <div class="section-header">
+          <h2 class="section-title">PROJECTS</h2>
+        </div>
+        <div class="section-content">
+          <div class="projects-grid">
+            <div class="project-block">
+              <h3 class="project-title">AudioSync</h3>
+              <div class="project-tech">C • FFmpeg • PortAudio • Sockets</div>
+              <ul class="project-desc">
+                <li>Building a distributed audio system enabling synchronized multi-device playbook over WiFi.</li>
+                <li>Implemented real-time streaming with FFmpeg, PortAudio, and UDP-based synchronization.</li>
+              </ul>
+              <a href="https://github.com/Sunil-Hegde/AudioSync" target="_blank" class="project-link">
+                Repository →
+              </a>
+            </div>
+            
+            <div class="project-block">
+              <h3 class="project-title">MOS 6502 Emulator</h3>
+              <div class="project-tech">C</div>
+              <ul class="project-desc">
+                <li>Building a cycle-accurate MOS 6502 CPU emulator in C with precise opcode decoding and execution.</li>
+                <li>Designing modular architecture for future expansion, deepening understanding of CPU internals.</li>
+              </ul>
+              <a href="https://github.com/AksharRao/mos6502_emul" target="_blank" class="project-link">
+                Repository →
+              </a>
+            </div>
+            
+            <div class="project-block">
+              <h3 class="project-title">MyOS</h3>
+              <div class="project-tech">C • x86 Assembly</div>
+              <ul class="project-desc">
+                <li>Built a minimal operating system with a custom bootloader and kernel using C and x86 assembly.</li>
+                <li>Implemented low-level system functionalities and interrupt handling, showcasing understanding of OS internals and hardware interfacing.</li>
+              </ul>
+              <a href="https://github.com/Sunil-Hegde/MyOS" target="_blank" class="project-link">
+                Repository →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Connect Section -->
+      <section id="connect" class="brutal-section">
+        <div class="section-header">
+          <h2 class="section-title">CONNECT</h2>
+        </div>
+        <div class="section-content">
+          <div class="connect-grid">
+            <a href="https://github.com/Sunil-Hegde" target="_blank" class="connect-block">
+              <div class="connect-label">GITHUB</div>
+              <div class="connect-arrow">→</div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/sunilrhegde" target="_blank" class="connect-block">
+              <div class="connect-label">LINKEDIN</div>
+              <div class="connect-arrow">→</div>
+            </a>
+            
+            <a href="https://blog.sunilhegde.tech" target="_blank" class="connect-block">
+              <div class="connect-label">BLOG</div>
+              <div class="connect-arrow">→</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="brutal-footer">
+        <div class="footer-content">
+          <div class="footer-text">That's All <br> © Sunil Hegde, 2025</div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Custom cursor follow
+      const cursor = document.querySelector('.cursor');
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+
+      // Glitch effect on hover
+      const glitchElements = document.querySelectorAll('.glitch-text');
+      glitchElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          el.classList.add('glitch-active');
+          setTimeout(() => el.classList.remove('glitch-active'), 300);
+        });
+      });
+
+      // Smooth scroll navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Scroll progress indicator
+      window.addEventListener('scroll', () => {
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        document.documentElement.style.setProperty('--scroll-progress', scrolled + '%');
+      });
+
+      // Click ripple effects
+      document.addEventListener('click', (e) => {
+        const ripple = document.createElement('div');
+        ripple.classList.add('click-ripple');
+        ripple.style.left = e.clientX + 'px';
+        ripple.style.top = e.clientY + 'px';
+        document.body.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    </script>
+  </body>
+</html>
